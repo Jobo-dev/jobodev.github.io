@@ -110,6 +110,44 @@ main {
     color: #000;
 }
 
+.summary {
+    max-width: 700px;
+    margin: 15px auto;
+    color: #c7d5e0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.about {
+    background-color: #16202d;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #2a475e;
+    margin-top: 30px;
+}
+
+.about h2 {
+    color: #ffffff;
+}
+
+.about h3 {
+    color: #66c0f4;
+    margin-top: 20px;
+}
+
+.about p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.about ul {
+    padding-left: 20px;
+}
+
+.about li {
+    margin-bottom: 5px;
+}
+
 /* Footer */
 footer {
     text-align: center;
