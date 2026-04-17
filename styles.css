@@ -1,40 +1,118 @@
+/* Base */
 body {
     font-family: Arial, sans-serif;
-    background-color: #0f172a;
-    color: #e2e8f0;
+    background: linear-gradient(to bottom, #1b2838, #0f141a);
+    color: #c7d5e0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.header {
+    background-color: #171a21;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 2px solid #2a475e;
+}
+
+.header h1 {
+    margin: 0;
+    color: #ffffff;
+}
+
+.header h2 {
+    margin: 5px 0 15px;
+    font-weight: normal;
+    color: #66c0f4;
+}
+
+.links a {
+    margin: 0 10px;
+    color: #c7d5e0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.links a:hover {
+    color: #66c0f4;
+}
+
+/* Layout */
+main {
     max-width: 900px;
     margin: auto;
     padding: 20px;
 }
 
-h1, h2, h3 {
-    color: #f8fafc;
+/* Project Cards */
+.project {
+    background-color: #16202d;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #2a475e;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-a {
-    color: #38bdf8;
+.project:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(102, 192, 244, 0.3);
+}
+
+.project h2, .project h3 {
+    color: #ffffff;
+}
+
+/* Featured Project */
+.featured {
+    border: 2px solid #66c0f4;
+    background: linear-gradient(to right, #1b2838, #16202d);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.links a {
-    margin-right: 15px;
     font-weight: bold;
 }
 
-.card {
-    background-color: #1e293b;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+.btn.primary {
+    background-color: #66c0f4;
+    color: #000;
 }
 
-hr {
-    border: 0;
-    height: 1px;
-    background: #334155;
-    margin: 25px 0;
+.btn.primary:hover {
+    background-color: #417a9b;
+    color: #fff;
+}
+
+.btn.secondary {
+    background-color: #5c7e10;
+    color: #fff;
+}
+
+.btn.secondary:hover {
+    background-color: #6fa720;
+}
+
+.btn.small {
+    background-color: #2a475e;
+    color: #c7d5e0;
+    padding: 6px 10px;
+}
+
+.btn.small:hover {
+    background-color: #66c0f4;
+    color: #000;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #8f98a0;
 }
