@@ -131,6 +131,19 @@ p {
     background: linear-gradient(to right, #1b2838, #16202d);
 }
 
+.badge {
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.featured-badge {
+    background-color: #66c0f4;
+    color: #000;
+}
+
 /* =========================
    ABOUT SECTIONS
 ========================= */
