@@ -1,4 +1,7 @@
-/* Base */
+/* =========================
+   BASE
+========================= */
+
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #1b2838, #0f141a);
@@ -7,7 +10,10 @@ body {
     padding: 0;
 }
 
-/* Header */
+/* =========================
+   HEADER
+========================= */
+
 .header {
     background-color: #171a21;
     padding: 30px;
@@ -26,32 +32,73 @@ body {
     color: #66c0f4;
 }
 
+/* Links */
 .links a {
     margin: 0 10px;
     color: #c7d5e0;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.2s ease;
 }
 
 .links a:hover {
     color: #66c0f4;
 }
 
-/* Layout */
+/* =========================
+   LAYOUT
+========================= */
+
 main {
     max-width: 900px;
     margin: auto;
     padding: 20px;
+    padding-bottom: 60px;
 }
 
-/* Project Cards */
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* =========================
+   SUMMARY
+========================= */
+
+.summary {
+    max-width: 700px;
+    margin: 15px auto;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #c7d5e0;
+}
+
+/* =========================
+   PROJECT CARDS
+========================= */
+
 .project {
     background-color: #16202d;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
     border: 1px solid #2a475e;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .project:hover {
@@ -59,64 +106,34 @@ main {
     box-shadow: 0 0 10px rgba(102, 192, 244, 0.3);
 }
 
-.project h2, .project h3 {
+.project h2,
+.project h3 {
     color: #ffffff;
 }
 
-/* Featured Project */
+.project ul {
+    margin-top: 10px;
+    padding-left: 18px;
+}
+
+.project li {
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.project p {
+    margin-bottom: 10px;
+}
+
+/* Featured */
 .featured {
     border: 2px solid #66c0f4;
     background: linear-gradient(to right, #1b2838, #16202d);
 }
 
-/* Buttons */
-.btn {
-    display: inline-block;
-    margin-top: 10px;
-    margin-right: 10px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.btn.primary {
-    background-color: #66c0f4;
-    color: #000;
-}
-
-.btn.primary:hover {
-    background-color: #417a9b;
-    color: #fff;
-}
-
-.btn.secondary {
-    background-color: #5c7e10;
-    color: #fff;
-}
-
-.btn.secondary:hover {
-    background-color: #6fa720;
-}
-
-.btn.small {
-    background-color: #2a475e;
-    color: #c7d5e0;
-    padding: 6px 10px;
-}
-
-.btn.small:hover {
-    background-color: #66c0f4;
-    color: #000;
-}
-
-.summary {
-    max-width: 700px;
-    margin: 15px auto;
-    color: #c7d5e0;
-    font-size: 14px;
-    line-height: 1.5;
-}
+/* =========================
+   ABOUT SECTIONS
+========================= */
 
 .about {
     background-color: #16202d;
@@ -148,7 +165,82 @@ main {
     margin-bottom: 5px;
 }
 
-/* Footer */
+.about::before {
+    content: "";
+    display: block;
+    height: 1px;
+    background: #2a475e;
+    margin-bottom: 15px;
+    opacity: 0.6;
+}
+
+/* =========================
+   COURSES / CERTIFICATIONS (RESTORED + IMPROVED)
+========================= */
+
+.section-highlight {
+    background-color: #1a2433;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #2a475e;
+    margin-top: 25px;
+}
+
+.section-highlight h2 {
+    color: #66c0f4;
+}
+
+.section-highlight ul {
+    padding-left: 20px;
+}
+
+.section-highlight li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn.primary {
+    background-color: #66c0f4;
+    color: #000;
+}
+
+.btn.primary:hover {
+    background-color: #417a9b;
+    color: #fff;
+}
+
+.btn.secondary {
+    background-color: #5c7e10;
+    color: #fff;
+}
+
+.btn.secondary:hover {
+    background-color: #6fa720;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
 footer {
     text-align: center;
     padding: 20px;
