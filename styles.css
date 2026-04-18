@@ -11,14 +11,43 @@ body {
 }
 
 /* =========================
+   NEW: LAYOUT (COLUMNS)
+========================= */
+
+.layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Sidebar (header + about + skills live here) */
+.sidebar {
+    position: sticky;
+    top: 20px;
+    align-self: start;
+}
+
+/* Main content overrides old main behavior */
+main {
+    max-width: none;   /* override original */
+    margin: 0;
+    padding: 0;
+    padding-bottom: 60px;
+}
+
+/* =========================
    HEADER
 ========================= */
 
 .header {
     background-color: #171a21;
     padding: 30px;
-    text-align: center;
+    text-align: left; /* better for sidebar */
     border-bottom: 2px solid #2a475e;
+    border-radius: 8px;
 }
 
 .header h1 {
@@ -34,7 +63,8 @@ body {
 
 /* Links */
 .links a {
-    margin: 0 10px;
+    display: block;
+    margin: 6px 0;
     color: #c7d5e0;
     text-decoration: none;
     font-weight: bold;
@@ -43,17 +73,6 @@ body {
 
 .links a:hover {
     color: #66c0f4;
-}
-
-/* =========================
-   LAYOUT
-========================= */
-
-main {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-    padding-bottom: 60px;
 }
 
 /* =========================
@@ -81,11 +100,9 @@ p {
 ========================= */
 
 .summary {
-    max-width: 700px;
-    margin: 15px auto;
     font-size: 15px;
     line-height: 1.6;
-    color: #c7d5e0;
+    margin-top: 15px;
 }
 
 /* =========================
@@ -153,7 +170,7 @@ p {
     padding: 20px;
     border-radius: 8px;
     border: 1px solid #2a475e;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .about h2 {
@@ -188,7 +205,7 @@ p {
 }
 
 /* =========================
-   COURSES / CERTIFICATIONS (RESTORED + IMPROVED)
+   COURSES / CERTIFICATIONS
 ========================= */
 
 .section-highlight {
@@ -258,4 +275,56 @@ footer {
     text-align: center;
     padding: 20px;
     color: #8f98a0;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: relative;
+    }
+}
+
+/* =========================
+   HERO LAYOUT (IMAGE + TEXT)
+========================= */
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Avatar placeholder */
+.avatar img {
+    width: 250px;
+    height: 250px;
+    border-radius: 12px; /* estilo GitHub moderno */
+    object-fit: cover;
+    border: 2px solid #2a475e;
+    background: #1b2838;
+}
+
+/* Text container */
+.hero-text {
+    flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .avatar img {
+        width: 100px;
+        height: 100px;
+    }
 }
