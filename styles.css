@@ -347,6 +347,52 @@ footer {
 }
 
 /* =========================
+   PROJECT MEDIA
+========================= */
+
+.project-media {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #2a475e;
+    background: #000; /* 🔥 clave */
+}
+
+.project-media iframe,
+.project-media img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.project-media iframe {
+    border: none;
+    display: block;
+}
+
+.project-media img {
+    object-fit: contain;
+}
+
+.project-media.vertical {
+    padding-top: 80%; /* más alto que 16:9 */
+}
+
+.project-media.vertical img {
+    object-fit: contain;
+}
+
+/* Hover sutil */
+.project-media:hover {
+    box-shadow: 0 0 10px rgba(102, 192, 244, 0.2);
+}
+
+/* =========================
    HERO LAYOUT (IMAGE + TEXT)
 ========================= */
 
