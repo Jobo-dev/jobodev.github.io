@@ -75,6 +75,24 @@ main {
 }
 
 /* =========================
+   SUB HEADLINE
+========================= */
+
+.sub-headline {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #8f98a0; /* gris suave (consistente con tu footer) */
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+}
+
+/* Opcional: pequeño énfasis en hover (sutil) */
+.sub-headline:hover {
+    color: #c7d5e0;
+    transition: color 0.2s ease;
+}
+
+/* =========================
    TYPOGRAPHY
 ========================= */
 
