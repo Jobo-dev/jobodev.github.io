@@ -18,7 +18,7 @@ body {
     display: grid;
     grid-template-columns: 320px 1fr;
     gap: 20px;
-    max-width: 1200px;
+    max-width: 1350px;
     margin: auto;
     padding: 20px;
 }
@@ -35,7 +35,6 @@ main {
     max-width: none;   /* override original */
     margin: 0;
     padding: 0;
-    padding-bottom: 60px;
 }
 
 /* =========================
@@ -108,6 +107,12 @@ p {
 /* =========================
    PROJECT CARDS
 ========================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
 
 .project {
     background-color: #16202d;
