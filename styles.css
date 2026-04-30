@@ -297,6 +297,38 @@ footer {
 }
 
 /* =========================
+   TECH BADGES
+========================= */
+
+.tech-badges {
+    margin-top: 10px;
+}
+
+.badge.tech {
+    display: inline-block;
+    background-color: #2a475e;
+    color: #c7d5e0;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin: 3px 4px 0 0;
+    border: 1px solid #66c0f4;
+    transition: all 0.2s ease;
+}
+
+.badge.lang { border-color: #4caf50; }       /* verde */
+.badge.web { border-color: #2196f3; }        /* azul */
+.badge.data { border-color: #ff9800; }       /* naranja */
+.badge.interactive { border-color: #9c27b0; }/* morado */
+
+/* Hover effect (muy importante visualmente) */
+.badge.tech:hover {
+    background-color: #66c0f4;
+    color: #000;
+    transform: translateY(-1px);
+}
+
+/* =========================
    HERO LAYOUT (IMAGE + TEXT)
 ========================= */
 
