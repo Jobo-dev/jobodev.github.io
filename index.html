@@ -9,6 +9,23 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
+<script>
+    let index = 0;
+
+    function moveCarousel(direction) {
+        const track = document.querySelector('.carousel-track');
+        const items = document.querySelectorAll('.carousel-item');
+        const total = items.length;
+
+        index += direction;
+
+        if (index < 0) index = total - 1;
+        if (index >= total) index = 0;
+
+        track.style.transform = `translateX(-${index * 100}%)`;
+    }
+</script>
+
 <body>
 
 <div class="layout">
@@ -276,15 +293,92 @@
             <div class="tech-badges">
                 <span class="badge tech lang">C#</span>
                 <span class="badge tech interactive">Unity</span>
-                <span class="badge tech data">Power BI</span>
-                <span class="badge tech data">PostgreSQL</span>
-                <span class="badge tech data">SQL</span>
-                <span class="badge tech web">Supabase</span>
-                <span class="badge tech web">REST API</span>
+                <span class="badge tech bi">Power BI</span>
+                <span class="badge tech db">PostgreSQL</span>
+                <span class="badge tech db">SQL</span>
+                <span class="badge tech backend">Supabase</span>
+                <span class="badge tech backend">REST API</span>
             </div>
 
             <br>
             <a href="https://jobodev.itch.io/crazy-tap" target="_blank" class="btn secondary">▶ Play Now</a>
+        </section>
+
+        <section class="project">
+            <h3>📊 Marketing Analytics Dashboard 
+                <span class="badge featured-badge">RECENT PROJECT</span>
+            </h3>
+            <div class="carousel">
+                <div class="carousel-track">
+
+                    <img src="images/Mkt-dashboard/mkt-1.png" class="carousel-item">
+                    <img src="images/Mkt-dashboard/mkt-2.png" class="carousel-item">
+                    <img src="images/Mkt-dashboard/mkt-3.png" class="carousel-item">
+                    <img src="images/Mkt-dashboard/mkt-4.png" class="carousel-item">
+
+                </div>
+                <button class="carousel-btn prev" onclick="moveCarousel(-1)">‹</button>
+                <button class="carousel-btn next" onclick="moveCarousel(1)">›</button>
+            </div>
+
+            <p>
+                A marketing analytics dashboard designed to monitor and evaluate digital campaign performance through key KPIs such as impressions, clicks, CTR, and conversions.
+                The goal is to transform raw marketing data into structured insights that support data-driven decision making across campaigns and channels.
+            </p>
+
+            <p><strong>Problem:</strong></p>
+            <p>
+                Marketing performance data is often fragmented and difficult to interpret across multiple campaigns and channels.
+                <br>Without a unified view, it becomes challenging to identify which campaigns are truly effective, where users drop off in the funnel, and how budget allocation impacts conversion outcomes.
+                <br>This lack of visibility limits the ability to optimize marketing strategies efficiently.
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>
+                Developed an interactive Power BI dashboard that consolidates campaign performance metrics into a single analytical view.
+                <br>The solution includes:
+            </p>
+            <ul>
+                <li>Centralized KPI tracking (impressions, clicks, CTR, conversions)</li>
+                <li>Campaign and channel performance comparison</li>
+                <li>Funnel visualization for engagement and conversion flow</li>
+                <li>Time-based trend analysis for performance monitoring</li>
+            </ul>
+            <p>
+                The dashboard was structured to enable fast identification of performance gaps and opportunities for optimization.
+            </p>
+            <p><strong>Key Inisights:</strong></p>
+            <ul>
+                <li>Several campaigns generate high impressions and clicks but low conversion rates, indicating inefficient targeting or landing page misalignment</li>
+                <li>A consistent gap exists between CTR and conversion rate, suggesting friction in the post-click experience</li>
+                <li>Conversion drop-off is most significant in the middle stages of the funnel</li>
+                <li>Certain channels deliver more cost-efficient engagement compared to others with higher traffic volume</li>
+                <li>Performance trends show that campaign effectiveness varies significantly over time, highlighting the importance of timing and iteration</li>
+            </ul>
+            <p><strong>Impact / Result:</strong></p>
+                <p>
+                    Enabled a clear, centralized view of marketing performance that improves decision-making across campaigns.
+                    <br>The dashboard supports:
+                </p>
+                <ul>
+                    <li>Faster identification of underperforming campaigns</li>
+                    <li>Data-driven optimization of marketing strategies</li>
+                    <li>Improved understanding of user behavior across the funnel</li>
+                    <li>Better allocation of marketing resources based on performance efficiency</li>
+                </ul>
+                <p>
+                    Overall, the solution enhances visibility into campaign effectiveness and enables more strategic, evidence-based marketing decisions.
+                </p>
+
+                <br>
+                <div class="tech-badges">
+                    <span class="badge tech bi">Power BI</span>
+                    <span class="badge tech db">SQL</span>
+                    <span class="badge tech data">Analytics</span>
+                    <span class="badge tech data">Business Intelligence</span>
+                    <span class="badge tech data">ETL Concepts</span>
+                    <span class="badge tech systems">Data Storytelling</span>
+                </div>
+
         </section>
 
         <br><hr><br>
@@ -335,7 +429,7 @@
                     <span class="badge tech lang">C#</span>
                     <span class="badge tech interactive">Unity</span>
                     <span class="badge tech interactive">PCVR</span>
-                    <span class="badge tech interactive">XR Interaction</span>
+                    <span class="badge tech qa">Testing</span>
                 </div>
             </section>
 
@@ -375,8 +469,8 @@
                 <div class="tech-badges">
                     <span class="badge tech lang">C#</span>
                     <span class="badge tech interactive">MonoGame</span>
-                    <span class="badge tech interactive">Game Loop</span>
-                    <span class="badge tech web">Windows Desktop</span>
+                    <span class="badge tech tools">Windows</span>
+                    <span class="badge tech systems">Game Loop</span>
                 </div>
             </section>
 
@@ -461,7 +555,7 @@
                     <span class="badge tech lang">C#</span>
                     <span class="badge tech interactive">Unity</span>
                     <span class="badge tech interactive">PCVR</span>
-                    <span class="badge tech interactive">Rendering Optimization</span>
+                    <span class="badge tech systems">Rendering</span>
                 </div>
 
             </section>
@@ -497,9 +591,8 @@
                 <div class="tech-badges">
                     <span class="badge tech lang">C#</span>
                     <span class="badge tech interactive">Unity</span>
-                    <span class="badge tech interactive">Reusable Component</span>
                     <span class="badge tech web">UI Systems</span>
-                    <span class="badge tech web">WebGL</span>
+                    <span class="badge tech systems">Reusable Component</span>
                 </div>
 
                 <br>

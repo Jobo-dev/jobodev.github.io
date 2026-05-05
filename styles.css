@@ -350,10 +350,18 @@ footer {
     transition: all 0.2s ease;
 }
 
-.badge.lang { border-color: #4caf50; }       /* verde */
-.badge.web { border-color: #2196f3; }        /* azul */
-.badge.data { border-color: #ff9800; }       /* naranja */
-.badge.interactive { border-color: #9c27b0; }/* morado */
+.badge.lang { border-color: #4caf50; }       /* verde - programming languages */
+.badge.web { border-color: #2196f3; }        /* azul - web / frontend */
+.badge.data { border-color: #ff9800; }       /* naranja - data / analytics / BI */
+.badge.interactive { border-color: #9c27b0; }/* morado - interactive systems / Unity / XR */
+
+.badge.backend { border-color: #00bcd4; }    /* cyan - backend / APIs */
+.badge.qa { border-color: #e91e63; }         /* rosa - QA / testing */
+.badge.tools { border-color: #ffc107; }      /* amarillo - tools / devops */
+.badge.db { border-color: #8bc34a; }         /* verde claro - databases */
+.badge.systems { border-color: #607d8b; }    /* gris azulado - systems / architecture */
+.badge.bi { border-color: #ff6f00; }         /* naranja fuerte - business intelligence / Power BI */
+
 
 /* Hover effect (muy importante visualmente) */
 .badge.tech:hover {
@@ -444,4 +452,61 @@ footer {
         width: 100px;
         height: 100px;
     }
+}
+
+/*Carrousel elements*/
+
+.carousel {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 👈 igual que project-media */
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #2a475e;
+    margin-top: 15px;
+    background: #0f141a;
+}
+
+.carousel-track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #000;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #16202d;
+    color: #66c0f4;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 6px;
+    z-index: 10;
+    opacity: 0.8;
+}
+
+.carousel-btn:hover {
+    opacity: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }
